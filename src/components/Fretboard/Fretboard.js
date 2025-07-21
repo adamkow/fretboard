@@ -24,9 +24,25 @@ const Fretboard = ({ numFrets = 24 }) => {
 
   const handleNoteSelect = (note) => {
     setSelectedNote(note);
-    if (note) {
+        if (note) {
         setRootNote(null);
         setScaleType(null);
+    }
+  };
+
+  const handleRootNoteSelect = (note) => {
+    const newRootNote = rootNote === note ? null : note;
+    setRootNote(newRootNote);
+
+    if (newRootNote) {
+      // If no scale is selected, default to major.
+      // Otherwise, keep the existing scale type.
+      if (!scaleType) {
+        setScaleType('major');
+      }
+    } else {
+      // If turning off the root note, also clear the scale type.
+      setScaleType(null);
     }
   };
   return (
@@ -49,7 +65,7 @@ const Fretboard = ({ numFrets = 24 }) => {
             <ScaleFilter 
         rootNote={rootNote}
         scaleType={scaleType}
-        setRootNote={setRootNote}
+        setRootNote={handleRootNoteSelect}
         setScaleType={setScaleType}
       />
     </div>

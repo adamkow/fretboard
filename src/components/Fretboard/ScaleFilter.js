@@ -19,7 +19,7 @@ const ScaleFilter = ({ rootNote, scaleType, setRootNote, setScaleType }) => {
           {notes.map(note => (
             <button
               key={note}
-              onClick={() => setRootNote(rootNote === note ? null : note)}
+              onClick={() => setRootNote(note)}
               className={`${styles.scaleButton} ${rootNote === note ? styles.active : ''}`}
             >
               {note}

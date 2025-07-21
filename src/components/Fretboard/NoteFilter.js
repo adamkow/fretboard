@@ -1,5 +1,5 @@
 import React from 'react';
-import { notes } from '@/lib/music';
+import { notes, noteColors } from '@/lib/music';
 import styles from './Fretboard.module.css';
 
 const NoteFilter = ({ selectedNote, setSelectedNote }) => {
@@ -18,6 +18,7 @@ const NoteFilter = ({ selectedNote, setSelectedNote }) => {
             key={note}
             className={`${styles.noteButton} ${selectedNote === note ? styles.active : ''}`}
             onClick={() => setSelectedNote(selectedNote === note ? null : note)}
+            style={{ backgroundColor: noteColors[note] }}
           >
             {note}
           </button>

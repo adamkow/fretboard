@@ -56,7 +56,6 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #f0e68c; 
   color: #333;
   font-weight: bold;
   font-size: 1rem;
@@ -124,21 +123,24 @@
 }
 
 .noteButton {
-  background-color: #444;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: #333;
   border: 1px solid #666;
   border-radius: 5px;
-  padding: 10px 15px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: opacity 0.2s;
+  font-weight: bold;
 }
 
 .noteButton:hover {
-  background-color: #555;
+  opacity: 0.8;
 }
 
 .noteButton.active {
-  background-color: #f0e68c;
-  color: #333;
-  border-color: #f0e68c;
+  box-shadow: 0 0 0 3px #fff;
+  border-color: #fff;
 }

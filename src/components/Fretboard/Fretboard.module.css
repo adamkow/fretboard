@@ -103,7 +103,7 @@
 
 .noteFilterContainer {
   display: flex;
-  flex-direction: column; /* Align title and buttons vertically */
+  flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }

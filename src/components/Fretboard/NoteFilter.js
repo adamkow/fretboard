@@ -1,5 +1,5 @@
 import React from 'react';
-import { notes, noteColors } from '@/lib/music';
+import { notes, noteColors } from '@/lib/notes';
 import styles from './Fretboard.module.css';
 
 const NoteFilter = ({ selectedNote, onNoteSelect }) => {

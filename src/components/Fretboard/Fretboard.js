@@ -6,7 +6,7 @@ import FretNumbers from './FretNumbers';
 import NoteFilter from './NoteFilter';
 import ScaleFilter from './ScaleFilter';
 import styles from './Fretboard.module.css';
-import { standardTuning, getNotesInScale } from '@/lib/music';
+import { standardTuning, getNotesInScale } from '@/lib/notes';
 
 const Fretboard = ({ numFrets = 24 }) => {
         const [selectedNote, setSelectedNote] = useState(null);

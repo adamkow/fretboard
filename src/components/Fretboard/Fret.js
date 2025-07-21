@@ -1,7 +1,7 @@
 import React from 'react';
 import Note from './Note';
 import styles from './Fretboard.module.css';
-import { getNoteFromFret } from '@/lib/music';
+import { getNoteFromFret } from '@/lib/notes';
 
 const Fret = ({ fretNumber, openStringNote, selectedNote, selectedScaleNotes }) => {
   const noteName = getNoteFromFret(openStringNote, fretNumber);

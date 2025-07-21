@@ -1,5 +1,5 @@
 import React from 'react';
-import { notes, scaleIntervals, noteColors } from '@/lib/music';
+import { notes, scaleIntervals, noteColors } from '@/lib/notes';
 import styles from './Fretboard.module.css';
 
 const ScaleFilter = ({ rootNote, scaleType, setRootNote, setScaleType }) => {

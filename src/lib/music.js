@@ -17,6 +17,26 @@ export const noteColors = {
   'B': '#f585a2',
 };
 
+export const scaleIntervals = {
+  major: [2, 2, 1, 2, 2, 2, 1],
+  minor: [2, 1, 2, 2, 1, 2, 2],
+};
+
+export const getNotesInScale = (rootNote, scaleName) => {
+  const intervals = scaleIntervals[scaleName];
+  if (!rootNote || !scaleName || !intervals) return null;
+
+  const scaleNotes = [rootNote];
+  let currentNoteIndex = notes.indexOf(rootNote);
+
+  for (const interval of intervals.slice(0, -1)) {
+    currentNoteIndex = (currentNoteIndex + interval) % notes.length;
+    scaleNotes.push(notes[currentNoteIndex]);
+  }
+
+  return scaleNotes;
+};
+
 export const getNoteFromFret = (openStringNote, fretNumber) => {
   const openNoteIndex = notes.indexOf(openStringNote);
   if (openNoteIndex === -1) {

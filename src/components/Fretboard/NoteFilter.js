@@ -2,14 +2,14 @@ import React from 'react';
 import { notes, noteColors } from '@/lib/music';
 import styles from './Fretboard.module.css';
 
-const NoteFilter = ({ selectedNote, setSelectedNote }) => {
+const NoteFilter = ({ selectedNote, onNoteSelect }) => {
   return (
     <div className={styles.noteFilterContainer}>
       <h3 className={styles.filterTitle}>Filter by Note</h3>
       <div className={styles.noteFilter}>
         <button
           className={`${styles.noteButton} ${!selectedNote ? styles.active : ''}`}
-          onClick={() => setSelectedNote(null)}
+          onClick={() => onNoteSelect(null)}
         >
           All
         </button>
@@ -17,7 +17,7 @@ const NoteFilter = ({ selectedNote, setSelectedNote }) => {
           <button
             key={note}
             className={`${styles.noteButton} ${selectedNote === note ? styles.active : ''}`}
-            onClick={() => setSelectedNote(selectedNote === note ? null : note)}
+            onClick={() => onNoteSelect(selectedNote === note ? null : note)}
             style={{ backgroundColor: noteColors[note] }}
           >
             {note}

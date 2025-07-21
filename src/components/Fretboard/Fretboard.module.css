@@ -144,3 +144,34 @@
   box-shadow: 0 0 0 3px #fff;
   border-color: #fff;
 }
+
+.scaleSelector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 15px;
+}
+
+.selectorLabel {
+  color: #fff;
+  font-weight: bold;
+}
+
+.scaleButton {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.scaleButton:hover {
+  background-color: #555;
+}
+
+.scaleButton.active {
+  background-color: #6a8d73;
+  border-color: #6a8d73;
+}

@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './Fretboard.module.css';
 import { noteColors } from '@/lib/music';
 
-const Note = ({ name, selectedNote, fretNumber }) => {
-  const isVisible = !selectedNote || selectedNote === name;
+const Note = ({ name, selectedNote, fretNumber, selectedScaleNotes }) => {
+    const isVisibleByNote = !selectedNote || selectedNote === name;
+  const isVisibleByScale = !selectedScaleNotes || selectedScaleNotes.includes(name);
+  const isVisible = isVisibleByNote && isVisibleByScale;
   const color = noteColors[name];
 
   return (

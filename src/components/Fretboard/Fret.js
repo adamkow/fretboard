@@ -9,7 +9,7 @@ const Fret = ({ fretNumber, openStringNote, selectedNote }) => {
   return (
     <div className={styles.fret}>
       <div className={styles.stringLine}></div>
-      <Note name={noteName} selectedNote={selectedNote} />
+      <Note name={noteName} selectedNote={selectedNote} fretNumber={fretNumber} />
     </div>
   );
 };

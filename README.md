@@ -2,6 +2,9 @@
 
 This is a Next.js project for visualizing a guitar fretboard.
 
+visit the site here:
+https://adamkow.github.io/fretboard/
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.

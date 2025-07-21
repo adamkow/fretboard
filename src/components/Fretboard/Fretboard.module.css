@@ -97,3 +97,48 @@
     line-height: 1;
     transform: translateX(-50%);
 }
+
+.note.hidden {
+  opacity: 0.2;
+}
+
+.noteFilterContainer {
+  display: flex;
+  flex-direction: column; /* Align title and buttons vertically */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filterTitle {
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.noteFilter {
+  display: flex;
+  gap: 10px;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.noteButton {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.noteButton:hover {
+  background-color: #555;
+}
+
+.noteButton.active {
+  background-color: #f0e68c;
+  color: #333;
+  border-color: #f0e68c;
+}

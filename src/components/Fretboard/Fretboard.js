@@ -1,18 +1,25 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import String from './String';
 import FretNumbers from './FretNumbers';
+import NoteFilter from './NoteFilter';
 import styles from './Fretboard.module.css';
 import { standardTuning } from '@/lib/music';
 
 const Fretboard = ({ numFrets = 24 }) => {
+  const [selectedNote, setSelectedNote] = useState(null);
   return (
-    <div className={styles.fretboardContainer}>
-      <div className={styles.fretboard}>
-        {standardTuning.map((note, index) => (
-          <String key={index} openNote={note} numFrets={numFrets} />
-        ))}
+    <div>
+      <div className={styles.fretboardContainer}>
+        <div className={styles.fretboard}>
+          {standardTuning.map((note, index) => (
+            <String key={index} openNote={note} numFrets={numFrets} selectedNote={selectedNote} />
+          ))}
+        </div>
+        <FretNumbers numFrets={numFrets} />
       </div>
-      <FretNumbers numFrets={numFrets} />
+      <NoteFilter selectedNote={selectedNote} setSelectedNote={setSelectedNote} />
     </div>
   );
 };

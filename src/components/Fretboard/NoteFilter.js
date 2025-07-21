@@ -8,7 +8,7 @@ const NoteFilter = ({ selectedNote, onNoteSelect }) => {
       <h3 className={styles.filterTitle}>Filter by Note</h3>
       <div className={styles.noteFilter}>
         <button
-          className={`${styles.noteButton} ${!selectedNote ? styles.active : ''}`}
+          className={`${styles.noteButton} ${styles.allButton} ${!selectedNote ? styles.active : ''}`}
           onClick={() => onNoteSelect(null)}
         >
           All

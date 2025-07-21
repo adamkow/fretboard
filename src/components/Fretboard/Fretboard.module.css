@@ -1,0 +1,96 @@
+.fretboardContainer {
+  padding: 20px;
+  background-color: #222;
+  display: inline-block;
+  border-radius: 8px;
+  margin: 2rem;
+  overflow-x: auto;
+}
+
+.fretboard {
+  display: flex;
+  flex-direction: column;
+  background-color: #3a2e25; 
+  border: 2px solid #2a1f18;
+  width: fit-content;
+}
+
+.string {
+  display: flex;
+  align-items: center;
+  height: 40px; 
+}
+
+.stringLine {
+  position: absolute;
+  height: 2px; 
+  background-color: #c0c0c0; 
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.fret {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 100%;
+  border-right: 3px solid #a9a9a9; 
+  box-sizing: border-box;
+}
+
+.fret:first-child {
+  border-left: 8px solid #544134;
+  width: 40px;
+}
+
+.note {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f0e68c; 
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  user-select: none;
+  z-index: 2;
+  border: 1px solid #555;
+}
+
+.fretNumbers {
+  display: flex;
+  padding-left: 40px; 
+  color: white;
+}
+
+.fretNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  color: #fff;
+  font-size: 0.9rem;
+  padding-top: 5px;
+}
+
+.fretMarkers {
+    display: flex;
+    padding-left: 40px; 
+    justify-content: flex-start;
+}
+
+.fretMarker {
+    width: 80px;
+    text-align: center;
+    color: #c0c0c0;
+    font-size: 1.5rem;
+    line-height: 1;
+}

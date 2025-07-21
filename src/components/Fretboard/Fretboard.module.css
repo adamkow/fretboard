@@ -79,6 +79,7 @@
   color: #fff;
   font-size: 0.9rem;
   padding-top: 5px;
+  transform: translateX(-50%);
 }
 
 .fretMarkers {
@@ -88,9 +89,11 @@
 }
 
 .fretMarker {
+    display: flex;
+    justify-content: center;
     width: 80px;
-    text-align: center;
     color: #c0c0c0;
     font-size: 1.5rem;
     line-height: 1;
+    transform: translateX(-50%);
 }
